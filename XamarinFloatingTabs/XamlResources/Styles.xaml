@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    x:Class="XamarinFloatingTabs.XamlResources.Styles">
+    <Color x:Key="Dark">#262d3a</Color>
+    
+    <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="Material Design Icons" />
+        <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons" />
+    </OnPlatform>
+    
+    <OnPlatform x:Key="MontserratMediumFontFamily" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="Montserrat-Medium" />
+        <On Platform="Android" Value="Montserrat-Medium.ttf#Montserrat Medium" />
+    </OnPlatform>
+    
+    <OnPlatform x:Key="MontserratSemiBoldFontFamily" x:TypeArguments="x:String">
+        <On Platform="iOS" Value="Montserrat-SemiBold" />
+        <On Platform="Android" Value="Montserrat-SemiBold.ttf#Montserrat SemiVet" />
+    </OnPlatform>
+    
+    <Style x:Key="TransparentButton" TargetType="Button">
+        <Setter Property="BorderColor" Value="Transparent" />
+        <Setter Property="BackgroundColor" Value="Transparent" />
+        <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+    </Style>
+
+    <Style x:Key="MaterialButton" TargetType="Button" BasedOn="{StaticResource TransparentButton}">
+        <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="TextColor" Value="Black" />
+        <Setter Property="WidthRequest" Value="50" />
+        <Setter Property="HeightRequest" Value="50" />
+    </Style>
+    
+    <Style x:Key="CategoryLabel" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBoldFontFamily}" />
+        <Setter Property="FontSize" Value="16" />
+    </Style>
+    
+    <Style x:Key="CategoryLinkLabel" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratSemiBoldFontFamily}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="TextColor" Value="#3d60db" />
+    </Style>
+    
+    <Style x:Key="StoryCategoryLabel" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratMediumFontFamily}" />
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="TextColor" Value="{StaticResource Dark}" />
+    </Style>
+    
+    <Style x:Key="StoryTitleLabel" TargetType="Label">
+        <Setter Property="FontFamily" Value="{StaticResource MontserratMediumFontFamily}" />
+        <Setter Property="FontSize" Value="13" />
+        <Setter Property="TextColor" Value="{StaticResource Dark}" />
+    </Style>    
+</ResourceDictionary>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamlresources="clr-namespace:XamarinFloatingTabs.XamlResources;assembly=XamarinFloatingTabs"
+             x:Class="XamarinFloatingTabs.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <xamlresources:DataTemplates />
+                <xamlresources:Styles />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
