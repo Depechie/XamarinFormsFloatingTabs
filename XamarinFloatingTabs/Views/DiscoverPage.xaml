@@ -6,10 +6,56 @@
                 BasePageTitle="Discover"
                 HideTabbar="true" PageTabMode="Floating">
     <views:BasePage.BasePageContent>
-        <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
-                        ItemsSource="{Binding Stories}"
-                        ItemTemplate="{StaticResource StoryListItemTemplate}"                        
-                        VerticalOptions="Start" HeightRequest="200"
-                        Margin="20,0,0,0"/>
+        <ScrollView Margin="0,24,0,12">
+            <StackLayout Orientation="Vertical">
+                <Grid RowSpacing="0" ColumnSpacing="0"
+                      Margin="24,0,24,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label Text="Stories"
+                           Style="{StaticResource CategoryLabel}"
+                           HorizontalOptions="StartAndExpand"
+                           Grid.Column="0" />
+                    
+                    <Label Text="Show all"
+                           Style="{StaticResource CategoryLinkLabel}"
+                           HorizontalOptions="EndAndExpand"
+                           Grid.Column="1" />
+                </Grid>
+                
+                <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                ItemsSource="{Binding Stories}"
+                                ItemTemplate="{StaticResource StoryListItemTemplate}"                        
+                                VerticalOptions="Start" HeightRequest="200"
+                                Margin="20,0,0,0"/>
+                
+                <Grid RowSpacing="0" ColumnSpacing="0"
+                      Margin="24,0,24,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label Text="Nearby"
+                           Style="{StaticResource CategoryLabel}"
+                           HorizontalOptions="StartAndExpand"
+                           Grid.Column="0" />
+                    
+                    <Label Text="Show all"
+                           Style="{StaticResource CategoryLinkLabel}"
+                           HorizontalOptions="EndAndExpand"
+                           Grid.Column="1" />
+                </Grid>
+                    
+                <CollectionView ItemsLayout="{x:Static ListItemsLayout.HorizontalList}"
+                                ItemsSource="{Binding NearbyBirds}"
+                                ItemTemplate="{StaticResource NearbyBirdListItemTemplate}"                        
+                                VerticalOptions="Start" HeightRequest="200"
+                                Margin="20,0,0,0"/>
+            </StackLayout>
+        </ScrollView>
     </views:BasePage.BasePageContent>
 </views:BasePage>
