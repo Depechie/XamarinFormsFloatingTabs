@@ -2,22 +2,8 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:XamarinFloatingTabs.Controls"
+             xmlns:icons="clr-namespace:XamarinFloatingTabs.Models"
              x:Class="XamarinFloatingTabs.Views.OverlayTabView">
-    <ContentView.Resources>
-        <ResourceDictionary>
-            <Style x:Key="TabbarImage" TargetType="Image">
-                <Setter Property="HeightRequest" Value="24" />
-                <Setter Property="WidthRequest" Value="24" />
-            </Style>
-            
-            <Style x:Key="TabbarLayout" TargetType="StackLayout">
-                <Setter Property="HeightRequest" Value="24" />
-                <Setter Property="WidthRequest" Value="24" />
-                <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="HorizontalOptions" Value="Center" />
-            </Style>
-        </ResourceDictionary>
-    </ContentView.Resources>
     <ContentView.Content>
         <Grid RowSpacing="0" ColumnSpacing="0">
             <Grid.ColumnDefinitions>
@@ -31,23 +17,20 @@
                                                 VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
                                                 Grid.Column="0" Grid.ColumnSpan="3" />
       
-            <StackLayout Style="{StaticResource TabbarLayout}"
-                         Grid.Column="0">
-                <Image x:Name="Tab1" Source="ic_discover.png" Style="{StaticResource TabbarImage}" />
-            </StackLayout>
-            <Button Style="{StaticResource TransparentButton}" Grid.Column="0" Clicked="OnDiscoveryClicked" />
+            <Button x:Name="Tab1" Style="{StaticResource MaterialFontButton}"
+                    Text="{x:Static icons:MaterialFontIcons.CompassOutline}"
+                    Grid.Column="0"
+                    Clicked="OnDiscoveryClicked" />
             
-            <StackLayout Style="{StaticResource TabbarLayout}"
-                         Grid.Column="1">
-                <Image x:Name="Tab2" Source="ic_search.png" Style="{StaticResource TabbarImage}" />
-            </StackLayout>
-            <Button Style="{StaticResource TransparentButton}" Grid.Column="1" Clicked="OnSearchClicked" />
+            <Button x:Name="Tab2" Style="{StaticResource MaterialFontButton}"
+                    Text="{x:Static icons:MaterialFontIcons.Magnify}"
+                    Grid.Column="1"
+                    Clicked="OnSearchClicked" />
             
-            <StackLayout Style="{StaticResource TabbarLayout}"
-                         Grid.Column="2">
-                <Image x:Name="Tab3" Source="ic_bookmarks.png" Style="{StaticResource TabbarImage}" />
-            </StackLayout>
-            <Button Style="{StaticResource TransparentButton}" Grid.Column="2" Clicked="OnBookmarksClicked" />
+            <Button x:Name="Tab3" Style="{StaticResource MaterialFontButton}"
+                    Text="{x:Static icons:MaterialFontIcons.BookmarkOutline}"
+                    Grid.Column="2"
+                    Clicked="OnBookmarksClicked" />
         </Grid>
     </ContentView.Content>
 </ContentView>

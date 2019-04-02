@@ -26,9 +26,9 @@
         <Setter Property="HorizontalOptions" Value="FillAndExpand" />
     </Style>
 
-    <Style x:Key="MaterialButton" TargetType="Button" BasedOn="{StaticResource TransparentButton}">
+    <Style x:Key="MaterialFontButton" TargetType="Button" BasedOn="{StaticResource TransparentButton}">
         <Setter Property="FontFamily" Value="{StaticResource MaterialFontFamily}" />
-        <Setter Property="FontSize" Value="20" />
+        <Setter Property="FontSize" Value="26" />
         <Setter Property="TextColor" Value="Black" />
         <Setter Property="WidthRequest" Value="50" />
         <Setter Property="HeightRequest" Value="50" />
